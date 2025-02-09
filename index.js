@@ -62,7 +62,7 @@ web.get('/generate', (req, res) => {
 
 // fallback express
 web.get('*', (req, res) => {
-    res.send(`Error: Please use the format <b>${req.protocol}://${req.get("host")}/download?size=[SIZE]?counter=[SINGLES,DOUBLES,TRIPLES]</b>`)
+    res.send(`Error: Please use the format <b>${req.protocol}://${req.get("host")}/generate?size=[SIZE]&counter=[SINGLES,DOUBLES,TRIPLES]</b>`)
     res.status(404).end();
 });
 
